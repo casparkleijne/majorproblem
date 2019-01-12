@@ -38,6 +38,7 @@ void DisplayAdapter::Sprite(const unsigned char * data, int index, uint8_t x, ui
 	}
 
 	transform(_sprite);
+
 	SetFrameMemory(_sprite, x * size, y * size, size, size);
 }
 
