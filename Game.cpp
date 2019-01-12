@@ -24,25 +24,104 @@ void Game::UpdateDisplay()
 {
 	delay(100);
 
-	for (int x = 0; x < 5; x++)
+	unsigned char maze[100];
+	
+	for (int i = 0; i < 100; i++)
 	{
-		_display->Sprite(Sprites.table, x , x % 8, 0, 24, SpriteTransform::Default);
+		maze[i] = rand() % 2 ;
 	}
 
-	for (int x = 0; x < 5; x++)
+	unsigned char buffer[64];
+
+	for (int c = 0; c < 64; c++)
 	{
-		_display->Sprite(Sprites.table, x, x % 8, 1, 24, SpriteTransform::Rotate90);
+		buffer[c] = 0x0;
 	}
 
-	for (int x = 0; x < 5; x++)
+	for (int y = 1; y < 9; y++)
 	{
-		_display->Sprite(Sprites.table, x, x % 8, 2, 24, SpriteTransform::Rotate180);
+		for (int x = 1; x < 9; x++)
+		{
+			if (maze[y * 10 + x] != 0)
+			{
+				buffer[(y-1) * 8 + (x-1)] = maze[(y - 1) * 10 + x] * 1 | maze[y * 10 + x + 1] * 2 | maze[(y + 1) * 10 + x] * 4 | maze[y * 10 + x - 1] * 8;
+			}
+		}
 	}
 
-	for (int x = 0; x < 5; x++)
+
+	Serial.println("");
+	for (int y = 0; y < 8; y++)
 	{
-		_display->Sprite(Sprites.table, x, x % 8, 3, 24, SpriteTransform::Rotate270);
+		for (int x = 0; x < 8; x++)
+		{
+			Serial.print(buffer[y * 8 + x]);
+			Serial.print(",");
+
+		}
+		Serial.println("");
 	}
+
+	for (int c = 0; c < 64; c++)
+	{
+		unsigned int index = buffer[c];
+
+		switch (index)
+		{
+		case 0:
+			_display->Sprite(Sprites.table, 7, c % 8, c / 8, 24, SpriteTransform::Default);
+			break;
+		case 1:
+			_display->Sprite(Sprites.table, 3, c % 8, c / 8, 24, SpriteTransform::Default);
+			break;
+		case 2:
+			_display->Sprite(Sprites.table, 3, c % 8, c / 8, 24, SpriteTransform::Rotate270);
+			break;
+		case 3:
+			_display->Sprite(Sprites.table, 4, c % 8, c / 8, 24, SpriteTransform::Rotate270);
+			break;
+		case 4:
+			_display->Sprite(Sprites.table, 3, c % 8, c / 8, 24, SpriteTransform::Rotate180);
+			break;
+		case 5:
+			_display->Sprite(Sprites.table, 1, c % 8, c / 8, 24, SpriteTransform::Default);
+			break;
+		case 6:
+			_display->Sprite(Sprites.table, 4, c % 8, c / 8, 24, SpriteTransform::Rotate180);
+			break;
+		case 7:
+			_display->Sprite(Sprites.table, 2, c % 8, c / 8, 24, SpriteTransform::Rotate270);
+			break;
+		case 8:
+			_display->Sprite(Sprites.table, 3, c % 8, c / 8, 24, SpriteTransform::Rotate90);
+			break;
+		case 9:
+			_display->Sprite(Sprites.table, 4, c % 8, c / 8, 24, SpriteTransform::Default);
+			break;
+		case 10:
+			_display->Sprite(Sprites.table, 1, c % 8, c / 8, 24, SpriteTransform::Rotate90);
+			break;
+		case 11:
+			_display->Sprite(Sprites.table, 2, c % 8, c / 8, 24, SpriteTransform::Default);
+			break;
+		case 12:
+			_display->Sprite(Sprites.table, 4, c % 8, c / 8, 24, SpriteTransform::Rotate90);
+			break;
+		case 13:
+			_display->Sprite(Sprites.table, 2, c % 8, c / 8, 24, SpriteTransform::Rotate90);
+			break;
+		case 14:
+			_display->Sprite(Sprites.table, 2, c % 8, c / 8, 24, SpriteTransform::Rotate180);
+			break;
+		case 15:
+			_display->Sprite(Sprites.table, 0, c % 8, c / 8, 24, SpriteTransform::Default);
+			break;
+		}
+
+
+
+	}
+
 
 
 
@@ -65,19 +144,19 @@ void Game::Run()
 		switch (trigger)
 		{
 		case 1:
-			_display->Sprite(Sprites.table, 0, 5, 1, 24, SpriteTransform::Rotate180);
+			_display->Sprite(Sprites.table, 2, 5, 1, 24, SpriteTransform::Rotate180);
 
 			break;
 		case 2:
-			_display->Sprite(Sprites.table, 0, 5, 1, 24, SpriteTransform::Rotate270);
+			_display->Sprite(Sprites.table, 2, 5, 1, 24, SpriteTransform::Rotate270);
 
 			break;
 		case 4:
-			_display->Sprite(Sprites.table, 0, 5, 1, 24, SpriteTransform::Rotate90);
+			_display->Sprite(Sprites.table, 2, 5, 1, 24, SpriteTransform::Rotate90);
 
 			break;
 		case 8:
-			_display->Sprite(Sprites.table, 0, 5, 1, 24, SpriteTransform::Default);
+			_display->Sprite(Sprites.table, 2, 5, 1, 24, SpriteTransform::Default);
 
 			break;
 		case 16:

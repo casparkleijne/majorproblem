@@ -122,6 +122,7 @@
     <ClInclude Include="EPDAdapter.h" />
     <ClInclude Include="epdif.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Maze.h" />
     <ClInclude Include="SpriteTransform.h" />
     <ClInclude Include="__vm\.MajorProblem.vsarduino.h" />
   </ItemGroup>
@@ -132,6 +133,7 @@
     <ClCompile Include="EPDAdapter.cpp" />
     <ClCompile Include="epdif.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Maze.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
