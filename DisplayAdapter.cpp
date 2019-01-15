@@ -28,10 +28,12 @@ void DisplayAdapter::Image(const unsigned char * data)
 		return;
 	}
 	SetFrameMemory(data);
-	DisplayFrame();
+	if (Init(lut_partial_update) != 0) {
+		return;
+	}
 }
 
-void DisplayAdapter::Sprite(const unsigned char * data, int index, uint8_t x, uint8_t y, uint8_t size, void transform (unsigned char *))
+void DisplayAdapter::Sprite(const unsigned char * data, int index, uint8_t x, uint8_t y, uint8_t size, void transform(unsigned char *))
 {
 
 	for (int r = 0; r < 72; r++)

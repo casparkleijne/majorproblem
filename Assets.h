@@ -15,7 +15,6 @@ extern "C" {
 
 	extern MemData8 Splash;
 	extern MemData8 Sprites;
-	extern MemData8 Maze;
 	extern MemData8 Props;
 	extern MemData8 Music;
 
