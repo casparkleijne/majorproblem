@@ -59,6 +59,11 @@
   <ImportGroup Label="Shared">
     <Import Project="EPDAdapter\EPDAdapter.vcxitems" Label="Shared" />
     <Import Project="Maze\Maze.vcxitems" Label="Shared" />
+    <Import Project="..\Assets\Assets.vcxitems" Label="Shared" />
+    <Import Project="..\CommonHardware\CommonHardware.vcxitems" Label="Shared" />
+    <Import Project="Assets\Assets.vcxitems" Label="Shared" />
+    <Import Project="CommonHardware\CommonHardware.vcxitems" Label="Shared" />
+    <Import Project="GFX\GFX.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -82,7 +87,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)..\MajorProblem;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\arduino\avr\libraries\SPI\src;$(ProjectDir)EPDAdapter;$(ProjectDir)Maze;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\libraries;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\arduino\avr\libraries;$(ProjectDir)..\..\..\Documents\Arduino\libraries;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\arduino\avr\variants\leonardo;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\tools\avr\avr\include;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\tools\avr\avr\include\avr;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\tools\avr\lib\gcc\avr\4.8.1\include;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\Program Files\arduino-1.8.8\arduino-1.8.8\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.MajorProblem.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>__AVR_ATmega32u4__;__AVR_ATmega32U4__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10808;ARDUINO_AVR_LEONARDO;ARDUINO_ARCH_AVR;USB_VID=0x2341;USB_PID=0x8036;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__AVR_ATmega32u4__;__AVR_ATmega32U4__;F_CPU=16000000L;ARDUINO=10808;ARDUINO_AVR_LEONARDO;ARDUINO_ARCH_AVR;USB_VID=0x2341;USB_PID=0x8036;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -118,17 +123,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Assets.h" />
-    <ClInclude Include="ButtonPad.h" />
-    <ClInclude Include="DisplayAdapter.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="SpriteTransform.h" />
     <ClInclude Include="__vm\.MajorProblem.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Assets.cpp" />
-    <ClCompile Include="ButtonPad.cpp" />
-    <ClCompile Include="DisplayAdapter.cpp" />
     <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

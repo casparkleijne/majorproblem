@@ -9,12 +9,24 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EPDAdapter", "EPDAdapter\EP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Maze", "Maze\Maze.vcxitems", "{80BD2610-D4EB-4391-9D8F-93A5D6F58E7C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GFX", "GFX\GFX.vcxitems", "{D1E7CCC7-71AC-4B3D-B33E-CED50042F992}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assets", "Assets\Assets.vcxitems", "{20914BCE-8802-4B43-8D7F-D02F22F7953F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonHardware", "CommonHardware\CommonHardware.vcxitems", "{5EC22558-9217-428A-9226-E5BE0C15FF65}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EPDAdapter\EPDAdapter.vcxitems*{10abbde3-91ae-4e13-b932-470a87e6b11e}*SharedItemsImports = 9
+		Assets\Assets.vcxitems*{20914bce-8802-4b43-8d7f-d02f22f7953f}*SharedItemsImports = 9
+		CommonHardware\CommonHardware.vcxitems*{5ec22558-9217-428a-9226-e5be0c15ff65}*SharedItemsImports = 9
 		Maze\Maze.vcxitems*{80bd2610-d4eb-4391-9d8f-93a5d6f58e7c}*SharedItemsImports = 9
+		Assets\Assets.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		CommonHardware\CommonHardware.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
 		EPDAdapter\EPDAdapter.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		GFX\GFX.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
 		Maze\Maze.vcxitems*{c5f80730-f44f-4478-bdae-6634efc2ca88}*SharedItemsImports = 4
+		GFX\GFX.vcxitems*{d1e7ccc7-71ac-4b3d-b33e-ced50042f992}*SharedItemsImports = 9
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
