@@ -1,3 +1,10 @@
+/*
+ Name:		EPDAdapter.cpp
+ Created:	1/16/2019 4:03:00 PM
+ Author:	CasparKleijne
+ Editor:	http://www.visualmicro.com
+*/
+
 #include "EPDAdapter.h"
 #include <stdlib.h>
 

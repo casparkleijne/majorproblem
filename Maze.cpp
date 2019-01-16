@@ -53,13 +53,11 @@ int Maze::UpdateMap(int pos, Directions option)
 
 void Maze::Generate(unsigned char * maze)
 {
-
 	for (int x = 0; x < 64; x++)
 	{
 		_map[x] = 0x00;
 	}
 	int pos = rand() % 64;
-
 	while (pos != -1)
 	{
 		EnQueue(pos);

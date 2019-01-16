@@ -24,16 +24,10 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="epdif.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Assets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ButtonPad.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EPDAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DisplayAdapter.h">
@@ -42,15 +36,9 @@
     <ClInclude Include="SpriteTransform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Maze.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="epdif.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Assets.cpp">
@@ -59,13 +47,7 @@
     <ClCompile Include="ButtonPad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EPDAdapter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DisplayAdapter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Maze.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
