@@ -1,19 +1,29 @@
-/*
- Name:		Maze.h
- Created:	1/16/2019 4:11:15 PM
- Author:	CasparKleijne
- Editor:	http://www.visualmicro.com
-*/
+#pragma once
 
-#ifndef _Maze_h
-#define _Maze_h
+typedef struct _directions
+{
+	int x;
+	int y;
+	unsigned int news; 
+	unsigned int snew;
 
-#if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
-#else
-	#include "WProgram.h"
-#endif
+} Directions;
+
+class Maze
+{
+
+	int EnQueue(int value);
+	int DeQueue();
+	int GenerateMaze(int pos);
+	int SelectRandomDirection(int pos, Directions * options);
+	int UpdateMap(int pos, Directions options);
+
+public:
 
 
-#endif
+	void Generate(unsigned char * maze);
+	
+	Maze();
+	~Maze();
+};
 

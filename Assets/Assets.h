@@ -1,19 +1,24 @@
-*
- Name:		Assets.h
- Created:	1/16/2019 4:17:50 PM
- Author:	CasparKleijne
- Editor:	http://www.visualmicro.com
-*/
-
-#ifndef _Assets_h
-#define _Assets_h
-
-#if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
-#else
-	#include "WProgram.h"
+#ifdef __cplusplus
+extern "C" {
 #endif
 
+	/* Includes ------------------------------------------------------------------*/
 
+#include <avr/pgmspace.h>
+#include <stdint.h>
+
+	typedef struct _memData8
+	{
+		unsigned char *table;
+
+	} MemData8;
+
+	extern MemData8 Splash;
+	extern MemData8 Sprites;
+	extern MemData8 Props;
+	extern MemData8 Music;
+
+#ifdef __cplusplus
+}
 #endif
 
