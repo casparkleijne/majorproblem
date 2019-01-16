@@ -15,5 +15,4 @@ IMPORTANT: The arduino.cc Library Rules must be followed when adding code or res
 	
 
 
-
 blog: http://www.visualmicro.com/post/2017/01/16/Arduino-Cross-Platform-Library-Development.aspx
